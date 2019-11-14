@@ -1,14 +1,16 @@
 from flask import Flask, request
 from twilio.rest import Client
 import requests, json
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 #https://timberwolf-mastiff-9776.twil.io/demo-reply
 
 @app.route('/')
 def index():
-    account_sid = 'AC2be45e696682ff8718995865d39782e1'
-    auth_token = 'aa7f3ffbc655c0a07f509e1e16768e64'
+    account_sid = os.getenv("TWILIO_SID")
+    auth_token = os.getenv("TWILIO_TOKEN")
     client = Client(account_sid, auth_token)
     message = client.messages \
                 .create(
