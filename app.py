@@ -1,9 +1,10 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
-
-
 app = Flask(__name__)
+
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
 
 @app.route("/")
 def hello():
@@ -15,11 +16,16 @@ def sms_reply():
     # Fetch the message
     msg = request.form.get('Body')
 
+    chatbot = ChatBot('Fall')
+    trainer= ListTrainer(chatbot)
+    response = chatbot.get_response(msg)
+   
     # Create reply
     resp = MessagingResponse()
-    resp.message("You said: {}".format(msg))
-
+    resp.message(str(response))
+    
+    
     return str(resp)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

@@ -2,12 +2,12 @@ from flask import Flask, request
 from twilio.rest import Client
 import requests, json
 import os
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 from pathlib import Path
 
-env_path = Path('.') / '.env'
-#load_dotenv(dotenv_path=env_path)
-load_dotenv(find_dotenv())
+APP_ROOT = os.path.join(os.path.dirname(__file__), '')
+dotenv_path = os.path.join(APP_ROOT, '.env')
+load_dotenv(dotenv_path)
 
 app = Flask(__name__)
 #https://timberwolf-mastiff-9776.twil.io/demo-reply
