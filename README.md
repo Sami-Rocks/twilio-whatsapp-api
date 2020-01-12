@@ -1,4 +1,4 @@
-# whatsapp-api
+# whatsapp-chatbot
 Trying out twilio whatsapp api
 
 
