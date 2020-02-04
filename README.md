@@ -1,5 +1,5 @@
 # whatsapp-chatbot
-Trying out twilio whatsapp api
+Trying out twilio whatsapp api.
 
 
 Made it work and I added a Chatterbot chatbot. Awesome!!
