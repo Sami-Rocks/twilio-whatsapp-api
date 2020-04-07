@@ -9,7 +9,7 @@ trainer.train([
     "Hello",
     "Hi Sami",
     "How are you doing",
-    "I'm doing great, how about you, Sami",
+    "I'm doing great, how about you",
     "That is good to hear",
     "Thank you",
     "You're welcome, Sami"
@@ -19,5 +19,6 @@ trainer.train([
     "See you soon! Sami"
 ])
 trainer.train(
-    "chatterbot.corpus.english"
+    "chatterbot.corpus.english.greetings",
+    "chatterbot.corpus.english.conversations"
 )
