@@ -7,18 +7,17 @@ trainer= ListTrainer(chatbot)
 
 trainer.train([
     "Hello",
-    "Hi there!",
+    "Hi Sami",
     "How are you doing",
-    "I'm doing great, how about you",
+    "I'm doing great, how about you, Sami",
     "That is good to hear",
     "Thank you",
-    "You're welcome"
+    "You're welcome, Sami"
 ])
 trainer.train([
     "Good bye!",
-    "See you soon!"
+    "See you soon! Sami"
 ])
 trainer.train(
-    "chatterbot.corpus.english.greetings",
-    "chatterbot.corpus.english.conversations"
+    "chatterbot.corpus.english"
 )

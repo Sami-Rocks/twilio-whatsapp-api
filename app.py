@@ -8,7 +8,7 @@ from chatterbot.trainers import ListTrainer
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    return "The system is working..."
 
 @app.route("/sms", methods=['POST', 'GET'])
 def sms_reply():

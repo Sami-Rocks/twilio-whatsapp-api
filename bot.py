@@ -5,5 +5,5 @@ chatbot = ChatBot('Fall')
 
 #trainer= ListTrainer(chatbot)
 
-response = chatbot.get_response("what's up")
+response = chatbot.get_response("What are you doing?")
 print(response)
